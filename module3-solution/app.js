@@ -78,10 +78,10 @@ function NarrowItDownController(MenuSearchService) {
      
     });
   };
-/*
+
   list.removeItem = function(itemIndex) {
     list.found.splice(itemIndex, 1);
-  }*/
+  }
 }
 
 
