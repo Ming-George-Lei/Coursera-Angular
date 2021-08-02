@@ -22,8 +22,8 @@ function FoundItemsDirective() {
 }
 
 
-function FoundItemsDirectiveController() {
-  var list = this;
+//function FoundItemsDirectiveController() {
+  //var list = this;
   /*
   list.cookiesInList = function () {
     for (var i = 0; i < list.items.length; i++) {
@@ -35,7 +35,7 @@ function FoundItemsDirectiveController() {
 
     return false;
   };*/
-}
+//}
 
 
 NarrowItDownController.$inject = ['MenuSearchService'];
