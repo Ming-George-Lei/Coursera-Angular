@@ -70,7 +70,12 @@ function NarrowItDownController(MenuSearchService) {
   list.getMatchedMenuItems = function () {
     var promise = MenuSearchService.getMatchedMenuItems(list.searchTerm);
     promise.then(function(items){
-      list.found = items;
+      if (items && items.length > 0) {
+        list.found = items;
+      } else {
+        list.found = [];
+      }
+     
     });
   };
 
