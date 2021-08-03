@@ -13,7 +13,6 @@ function FoundItemsDirective() {
     scope: {
       items: '<',
       onRemove: '&',
-      title: '@title'
     },
     controller: FoundItemsDirectiveController,
     controllerAs: 'list',
@@ -39,10 +38,12 @@ function NarrowItDownController(MenuSearchService) {
     promise.then(function(items){
       if (items && items.length > 0) {
         list.found = items;
+        list.title = "Found Items";
       } else {
         list.found = [];
+        list.title = "";
       }
-     
+
     });
   };
 
@@ -56,7 +57,7 @@ function NarrowItDownController(MenuSearchService) {
 MenuSearchService.$inject = ['$http'];
 function MenuSearchService($http) {
   var service = this;
-  
+
   service.getMatchedMenuItems = function(searchTerm) {
     return $http(
       {
