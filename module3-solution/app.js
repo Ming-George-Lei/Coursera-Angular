@@ -64,7 +64,9 @@ function MenuSearchService($http) {
       }
     ).then(function (response) {
       var foundItems = [];
-      if (searchTerm.trim() === "") {
+      searchTerm = searchTerm || "";
+      searchTerm = searchTerm.trim();
+      if (searchTerm === "") {
         return foundItems;
       }
       // process result and only keep items that match
@@ -72,7 +74,6 @@ function MenuSearchService($http) {
       var counter = 0;
       for (var i = 0; i < response.data.menu_items.length; i++){
         var item = response.data.menu_items[i];
-        //console.log(item);
         if (item.description.toLowerCase().indexOf(searchTerm) !== -1) {
           foundItems.push(item);
         }
