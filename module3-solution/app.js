@@ -12,7 +12,8 @@ function FoundItemsDirective() {
     templateUrl: 'narrowItDownList.html',
     scope: {
       items: '<',
-      onRemove: '&'
+      onRemove: '&',
+      title: '@title'
     },
     controller: FoundItemsDirectiveController,
     controllerAs: 'list',
