@@ -41,7 +41,7 @@ function NarrowItDownController(MenuSearchService) {
         list.title = "Found Items";
       } else {
         list.found = [];
-        list.title = "";
+        list.title = "Nothing Found!";
       }
 
     });
